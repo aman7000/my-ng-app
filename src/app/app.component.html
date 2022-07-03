@@ -349,6 +349,15 @@
     </svg>
 
   </div>
+  <nav>
+    <ul>
+      <li><a routerLink="/first-component" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a></li>
+      <li><a routerLink="/second-component" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+    </ul>
+  </nav>
+  
+  <!-- The routed views render in the <router-outlet>-->
+  <router-outlet></router-outlet>
 
   <!-- Resources -->
   <h2>Resources</h2>
@@ -481,4 +490,4 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
