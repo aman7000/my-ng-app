@@ -2,6 +2,10 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
+
+	function takeToNgApp(){
+		window.location.href = "/";
+	}
 </script>
 
 <header>
@@ -21,12 +25,9 @@
 				<a sveltekit:prefetch href="{base}/about">About</a>
 			</li>
 			<li>
-				<a href="/">Ng app</a>
+				<!-- workaround below due to kit.paths.base issue https://github.com/sveltejs/kit/issues/4528 -->
+				<a href="" on:click={takeToNgApp}>Ng app</a> 
 			</li>
-
-			<!-- <li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
-			</li> -->
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
