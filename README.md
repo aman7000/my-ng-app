@@ -1,5 +1,13 @@
 # MyNgApp
 
+## Svelete integration information:
+We have made config entry as `kit.paths.base: "/s"` in svelte.config.js directory.
+Do `npm install` in both projects(angular and svelte).
+To build full run `npm run build-full` from angular project
+It will build both projects and will copy Svlete build folder to anugular dist folder using script `scripts full-build.mjs`
+Serve local folder using any static server e.g. `http-server dist\my-ng-app`
+
+Below are details for angular project.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
 ## Development server
