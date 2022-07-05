@@ -9,7 +9,6 @@
     let ls = null;
     onMount(() => {
         typeof localStorage !== `undefined` && (ls = localStorage);
-        foo = read();
     });
 
     function token() {
