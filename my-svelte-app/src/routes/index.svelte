@@ -5,6 +5,17 @@
 <script lang="ts">
 	import { base } from "$app/paths";
 	import Counter from '$lib/Counter.svelte';
+    import { onMount } from 'svelte';
+    let ls = null;
+    onMount(() => {
+        typeof localStorage !== `undefined` && (ls = localStorage);
+        foo = read();
+    });
+
+    function token() {
+       let token = ls.getItem("token");
+       alert(token);
+    }
 </script>
 
 <svelte:head>
@@ -29,6 +40,8 @@
 	</h2>
 
 	<Counter />
+
+    <button on:click={token}>token</button>
 </section>
 
 <style>

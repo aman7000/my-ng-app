@@ -10,6 +10,7 @@ export class SecondComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    localStorage.setItem("token", "second");
   }
 
 }
